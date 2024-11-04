@@ -6,7 +6,7 @@
 /*   By: carbon-m <carbon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:32:01 by carbon-m          #+#    #+#             */
-/*   Updated: 2024/11/04 16:55:50 by carbon-m         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:09:56 by carbon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 int	ft_putmem(unsigned long long input)
 {
-	long long	*temp;
+	long long	temp[16];
 	int			len;
 	int			i;
 
 	i = 0;
 	len = ft_numhexlen(input) + 4;
-	temp = malloc(sizeof(long long) * len);
+	if (!input)
+		return (ft_putstr("(nil)"));
 	ft_putstr("0x");
 	while (i <= len)
 	{
@@ -36,6 +37,5 @@ int	ft_putmem(unsigned long long input)
 		else
 			ft_putnbr(temp[i]);
 	}
-	free (temp);
 	return (len + 3);
 }
