@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carbon-m <carbon-m@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: carbon-m <carbon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 18:01:39 by carbon-m          #+#    #+#             */
-/*   Updated: 2024/11/02 18:07:16 by carbon-m         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:17:54 by carbon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,53 @@
 
 int	main(void)
 {
-	int	i = 12;
-	unsigned int ui = 122222222;
+	int	i = -12;
+	unsigned int ui = 12222222;
 	char c = 'c';
-	char ptr[10] = "hola cara";
-	char *ptr2;
+	char *ptr = NULL;
 	int ret;
+	unsigned int	hex = 0x105d8;
+	unsigned int	uphex = 0XEEF4E9;
 
-	ret = printf(" int : %d \n", i);
+	ret = printf("op int : %d \n", i);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   int : %d \n", i);
 	printf(" ret : %d \n", ret);
-	ret = ft_printf(" int : %d \n", i);
+	ret = printf("op int : %i \n", i);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   int : %i \n", i);
+	printf(" ret : %d \n", ret);
+	ret = printf("op unint : %u \n", ui);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   unint : %u \n", ui);
+	printf(" ret : %d \n", ret);
+	ret = printf("op char : %c \n", c);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   char : %c \n", c);
+	printf(" ret : %d \n", ret);
+	ret = printf("op string : %s \n", ptr);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   string : %s \n", ptr);
+	printf(" ret : %d \n", ret);
+	ret = printf("op hex : %x \n", hex);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   hex : %x \n", hex);
+	printf(" ret : %d \n", ret);
+	ret = printf("op uphex : %X \n", uphex);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   uphex : %X \n", uphex);
+	printf(" ret : %d \n", ret);
+	ret = printf("op mem : %p \n", &ptr);
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   mem : %p \n", &ptr);
+	printf(" ret : %d \n", ret);
+	ret = printf("op percent : %% \n");
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   precent : %% \n");
+	printf(" ret : %d \n", ret);
+	ret = printf("op printf : just write\n");
+	printf("op ret : %d \n", ret);
+	ret = ft_printf("   printf : just write\n");
 	printf(" ret : %d \n", ret);
 	return (0);
 }

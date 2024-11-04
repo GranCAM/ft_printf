@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carbon-m <carbon-m@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: carbon-m <carbon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:22:34 by carbon-m          #+#    #+#             */
-/*   Updated: 2024/11/02 18:00:42 by carbon-m         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:53:04 by carbon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	type(const char input, va_list args)
 		return (ft_putchar(va_arg(args, int)));
 	if (input == 's')
 		return (ft_putstr(va_arg(args, char *)));
-	if (input == 'd' || 'i')
+	if (input == 'd' || input == 'i')
 		return (ft_putnbr(va_arg(args, int)));
 	if (input == 'u')
 		return (ft_putunsnbr(va_arg(args, unsigned int)));
@@ -51,9 +51,8 @@ int	ft_printf(char const *input, ...)
 		}
 		else
 		{
-			ft_putchar(input[i]);
+			ret = ret + ft_putchar(input[i]);
 			++i;
-			++ret;
 		}
 	}
 	va_end(args);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carbon-m <carbon-m@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: carbon-m <carbon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:27:06 by carbon-m          #+#    #+#             */
-/*   Updated: 2024/11/02 18:00:48 by carbon-m         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:26:33 by carbon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdint.h>
+# include <stdlib.h>
 
 int		ft_printf(char const *input, ...);
 int		ft_putchar(int input);
 int		ft_putstr(char *input);
 int		ft_putnbr(int input);
 int		ft_putunsnbr(unsigned int input);
+int		ft_numhexlen(unsigned int input);
 int		ft_puthex(unsigned int input);
 int		ft_puthexupper(unsigned int input);
 int		ft_putmem(unsigned long long input);
