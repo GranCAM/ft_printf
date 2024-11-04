@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carbon-m <carbon-m@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: carbon-m <carbon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:32:06 by carbon-m          #+#    #+#             */
-/*   Updated: 2024/11/02 17:47:15 by carbon-m         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:26:18 by carbon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int	ft_putnbr(int input)
 		ret = ret + ft_putnbr(input % 10);
 	}
 	else
-		ret = ret + ft_putchar(input + '0');
+		ret = ret + ft_putchar(input + 48);
 	return (ret);
 }

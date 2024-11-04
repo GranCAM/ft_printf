@@ -6,7 +6,7 @@
 /*   By: carbon-m <carbon-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:22:34 by carbon-m          #+#    #+#             */
-/*   Updated: 2024/11/04 16:53:04 by carbon-m         ###   ########.fr       */
+/*   Updated: 2024/11/05 15:54:03 by carbon-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@ static int	type(const char input, va_list args)
 {
 	if (input == 'c')
 		return (ft_putchar(va_arg(args, int)));
-	if (input == 's')
+	else if (input == 's')
 		return (ft_putstr(va_arg(args, char *)));
-	if (input == 'd' || input == 'i')
+	else if (input == 'd' || input == 'i')
 		return (ft_putnbr(va_arg(args, int)));
-	if (input == 'u')
+	else if (input == 'u')
 		return (ft_putunsnbr(va_arg(args, unsigned int)));
-	if (input == 'x')
+	else if (input == 'x')
 		return (ft_puthex(va_arg(args, unsigned int)));
-	if (input == 'X')
+	else if (input == 'X')
 		return (ft_puthexupper(va_arg(args, unsigned int)));
-	if (input == 'p')
+	else if (input == 'p')
 		return (ft_putmem(va_arg(args, unsigned long long)));
-	if (input == '%')
+	else if (input == '%')
 		return (ft_putchar('%'));
 	return (0);
 }
@@ -47,13 +47,11 @@ int	ft_printf(char const *input, ...)
 		if (input[i] == '%')
 		{
 			ret = ret + type(input[i + 1], args);
-			i = i + 2;
+			i = i + 1;
 		}
 		else
-		{
 			ret = ret + ft_putchar(input[i]);
-			++i;
-		}
+		++i;
 	}
 	va_end(args);
 	return (ret);
