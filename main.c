@@ -22,7 +22,6 @@ int	main(void)
 	int ret;
 	unsigned int	hex = 0x105d8;
 	unsigned int	uphex = 0XEef4E9;
-	unsigned int	uphex = 0XEef4E9;
 
 	ret = printf("op int : %d \n", i);
 	printf("op ret : %d \n", ret);
