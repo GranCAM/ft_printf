@@ -27,21 +27,17 @@ int	main(void)
 	printf("op ret : %d \n", ret);
 	ret = ft_printf("   int : %d \n", i);
 	printf("   ret : %d \n", ret);
-	printf("   ret : %d \n", ret);
 	ret = printf("op int : %i \n", i);
 	printf("op ret : %d \n", ret);
 	ret = ft_printf("   int : %i \n", i);
-	printf("   ret : %d \n", ret);
 	printf("   ret : %d \n", ret);
 	ret = printf("op unint : %u \n", ui);
 	printf("op ret : %d \n", ret);
 	ret = ft_printf("   unint : %u \n", ui);
 	printf("   ret : %d \n", ret);
-	printf("   ret : %d \n", ret);
 	ret = printf("op char : %c \n", c);
 	printf("op ret : %d \n", ret);
 	ret = ft_printf("   char : %c \n", c);
-	printf("   ret : %d \n", ret);
 	printf("   ret : %d \n", ret);
 	ret = printf("op string : %s \n", ptr);
 	printf("op ret : %d \n", ret);
@@ -54,7 +50,6 @@ int	main(void)
 	ret = printf("op hex : %x \n", hex);
 	printf("op ret : %d \n", ret);
 	ret = ft_printf("   hex : %x \n", hex);
-	printf("   ret : %d \n", ret);
 	printf("   ret : %d \n", ret);
 	ret = printf("op uphex : %X \n", uphex);
 	printf("op ret : %d \n", ret);
@@ -71,7 +66,6 @@ int	main(void)
 	ret = printf("op percent : %% \n");
 	printf("op ret : %d \n", ret);
 	ret = ft_printf("   precent : %% \n");
-	printf("   ret : %d \n", ret);
 	printf("   ret : %d \n", ret);
 	ret = printf("op printf : just write\n");
 	printf("op ret : %d \n", ret);
