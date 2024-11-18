@@ -44,7 +44,7 @@ int	ft_printf(char const *input, ...)
 	i = 0;
 	while (input[i] != 0)
 	{
-		if (input[i] == '%')
+		if (input[i] == '%' && input[i + 1])
 		{
 			ret = ret + type(input[i + 1], args);
 			i = i + 1;
